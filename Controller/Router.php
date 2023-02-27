@@ -23,7 +23,10 @@
         {
             require("../View/public/register.php");
         }
-        // elseif($_GET["action"] == "")
+        elseif($_GET["action"] == "delete")
+        {
+            UserController::delete($_GET["id_user"]);
+        }
     }
 
 ?>

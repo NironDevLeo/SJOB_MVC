@@ -94,4 +94,20 @@ class User{
             echo $erreur->getMessage();
         }
     }
+
+
+    public static function deleteUserById($id_user)
+    {
+        try{
+            $db = new DB();
+            $dbh = $db->getDbh();
+            $stmt = $dbh->prepare("DELETE FROM user WHERE id_user=?");
+            $stmt->bindValue(1, $id_user);
+            $stmt->execute();
+            
+            return $stmt->fetch();
+        } catch (PDOException $erreur) {
+            echo $erreur->getMessage();
+        }
+    }
 }

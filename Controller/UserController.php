@@ -108,4 +108,10 @@ class UserController{
       require("../View/admin/readUser.php");
 
    }
+   
+   
+   public static function delete($id_user){
+    $user = User::deleteUserById($id_user);
+    require("../View/admin/deleteValidate.php");
+   }
 }
