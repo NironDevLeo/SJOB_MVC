@@ -7,15 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<?php
+    if(isset($erreurs)){
+        var_dump($erreurs);
+    }
+?>
 <body>
-
-<?php if(isset($erreurs)):?>
-    <?php var_dump($erreurs)?>
     <form action="./Router.php?action=register" method="post">
-<?php else: ?>
-    <form action="../../Controller/Router.php?action=register" method="post">
-<?php endif ?>
-
 
         <div class="divForm">
             <label for="email">email</label>

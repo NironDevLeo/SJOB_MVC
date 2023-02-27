@@ -17,8 +17,13 @@
         }
         elseif($_GET["action"] == "readUser")
         {
-            UserController::findUser($_GET["id"]);
+            UserController::findUser($_GET["id_user"]);
         }
+        elseif($_GET["action"] == "create")
+        {
+            require("../View/public/register.php");
+        }
+        // elseif($_GET["action"] == "")
     }
 
 ?>

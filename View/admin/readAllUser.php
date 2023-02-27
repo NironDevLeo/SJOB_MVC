@@ -18,7 +18,7 @@
             <h1>Uttilisateur(s)</h1>
         </header>
         <div class="ajouter">
-        <a class="ajouter" href="./formuser.php"><img src="../static/image/icons8-plus-30.png"  alt=""> Ajouter un nouveau uttilisateur</a>
+        <a class="ajouter" href="./Router.php?action=create"><img src="../static/image/icons8-plus-30.png"  alt=""> Ajouter un nouveau uttilisateur</a>
     </div>
 
 
@@ -49,8 +49,8 @@
                 </ul>
                 <div class="flex box2">
                 <a class="marginL" href="./Router.php?action=readUser&id_user=<?= $user["id_user"]?>"><img class="icon1" src="../static/image/icons8-vision-24.png" alt=""></a>
-                <a class="marginL" href="./formUpdateUser.php?id_user=<?= $user["id_user"]?>"><img class="icon2" src="../static/image/icons8-stylo-à-bille-30.png" alt=""></a>
-                <a class="marginL" href="./deleteUser.php?id_user=<?= $user["id_user"]?>"><img class="icon3" src="../static/image/icons8-supprimer-24.png" alt=""></a>
+                <!-- <a class="marginL" href="./Router.php?action=id_user=<?= $user["id_user"]?>"><img class="icon2" src="../static/image/icons8-stylo-à-bille-30.png" alt=""></a> -->
+                <a class="marginL" href="./Router.php?action=delete&id_user=<?= $user["id_user"]?>"><img class="icon3" src="../static/image/icons8-supprimer-24.png" alt=""></a>
                 </div>
             </div>
             <?php endforeach; ?>
