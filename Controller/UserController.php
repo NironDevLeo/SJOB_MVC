@@ -126,7 +126,7 @@ class UserController{
 
     public static function modif($post)
     {
-        $user= new User($post["email"], $post["password"], $post["phone"], $post["cv"], $post["city"], $post["ray"]);
+        $user= new User($post["email"], $post["password"], $post["phone"], $post["cv"], $post["city"], $post["ray"], false);
         $user->update($post["id_user"]);
         self::readAllUser();
     }
