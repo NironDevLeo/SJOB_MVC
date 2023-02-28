@@ -60,6 +60,9 @@ class UserController{
             require("../View/public/register.php");
         }
     }
+
+
+
     public static function login($post){
         $erreurs = [];
 
@@ -112,6 +115,19 @@ class UserController{
    
    public static function delete($id_user){
     $user = User::deleteUserById($id_user);
-    require("../View/admin/deleteValidate.php");
+    self::readAllUser();
    }
+
+
+    public static function update($id_user){
+        $user = User::findUserById($id_user);
+        require("../View/public/formUpdate.php");
+    }
+
+    public static function modif($post)
+    {
+        $user= new User($post["email"], $post["password"], $post["phone"], $post["cv"], $post["city"], $post["ray"]);
+        $user->update($post["id_user"]);
+        self::readAllUser();
+    }
 }

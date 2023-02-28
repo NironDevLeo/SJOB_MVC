@@ -110,4 +110,26 @@ class User{
             echo $erreur->getMessage();
         }
     }
+
+
+    public function update($id_user){
+        try{
+            $dao = new DB();
+            $dbh = $dao->getDbh();
+
+            $stmt = $dbh->prepare("UPDATE `user` SET `email`=?, `password`=?, `phone`=?, `cv`=?, `city`=?, `ray`=?
+            WHERE id_user=?");
+            $stmt->bindValue(1,$this->email);
+            $stmt->bindValue(2,$this->password);
+            $stmt->bindValue(3,$this->phone);
+            $stmt->bindValue(4,$this->cv);
+            $stmt->bindValue(5,$this->city);
+            $stmt->bindValue(6,$this->ray);
+            $stmt->bindValue(7,$id_user);
+
+            $stmt->execute();
+        }catch(PDOException $erreur){
+            echo $erreur->getMessage();
+        }
+    }
 }

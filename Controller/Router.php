@@ -27,6 +27,14 @@
         {
             UserController::delete($_GET["id_user"]);
         }
+        elseif($_GET["action"] == "update")
+        {
+            UserController::update($_GET["id_user"]);
+        }
+        elseif($_GET["action"] == "formUpdate")
+        {
+            UserController::modif($_POST);
+        }
     }
 
 ?>
