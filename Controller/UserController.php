@@ -5,7 +5,7 @@ require("../autoloader.php");
 
 class UserController{
 
-    public static function register($post){
+    public static function register($post, $file){
         $erreurs = [];
         $phone = null;
         $cv = null;
@@ -29,10 +29,10 @@ class UserController{
         {
             $phone = strip_tags($post["phone"]);
         }
-        if(!empty($post["cv"]))
-        {
-            $cv = strip_tags($post["cv"]);
-        }
+        // if(!empty($post["cv"]))
+        // {
+        //     $cv = strip_tags($post["cv"]);
+        // }
         if(!empty($post["city"]))
         {
             $city = strip_tags($post["city"]);
@@ -52,7 +52,7 @@ class UserController{
 
 
         if(empty($erreurs)){
-            $user = new User($post["email"], $post["password"], $post["phone"], $post["cv"], $post["city"], $post["ray"], 0);
+            $user = new User($post["email"], $post["password"], $post["phone"], $file, $post["city"], $post["ray"], 0);
             $user->create();
             header("Location: ../index.php");
         }

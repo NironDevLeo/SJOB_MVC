@@ -5,7 +5,7 @@
     if($_GET["action"]){
         if($_GET["action"] == "register")
         {
-            UserController::register($_POST);
+            UserController::register($_POST, $_FILES);
         }
         elseif($_GET["action"] == "login")
         {

@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="./Router.php?action=formUpdate" method="post">
+    <form enctype="multipart/form-data" action="./Router.php?action=formUpdate" method="post">
     <input type="hidden" name="id_user" id="id_user" value="<?= $user["id_user"]; ?>">
     <div class="divForm">
             <label for="email">email</label>

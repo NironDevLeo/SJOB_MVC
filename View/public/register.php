@@ -13,7 +13,7 @@
     }
 ?>
 <body>
-    <form action="./Router.php?action=register" method="post">
+    <form  enctype="multipart/form-data" action="./Router.php?action=register" method="post">
 
         <div class="divForm">
             <label for="email">email</label>
