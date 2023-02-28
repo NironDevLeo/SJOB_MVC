@@ -14,7 +14,7 @@
             <li><?= $user["ray"]?></li>
             <li><?= $user["admin"]?></li>
         </ul>
-        <a href="./Router.php?action=formUpdateUser&id_user=<?=$user["id_user"]?>">Modif</a>
-        <a href="./Router.php?action=deleteUser&id_user=<?=$user["id_user"]?>">Supprimer</a>
+        <a href="./Router.php?action=update&id_user=<?= $user["id_user"]?>">Modif</a>
+        <a href="./Router.php?action=delete&id_user=<?=$user["id_user"]?>">Supprimer</a>
 </body>
 </html>

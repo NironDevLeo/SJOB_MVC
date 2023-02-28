@@ -8,5 +8,6 @@
 </head>
 <body>
     <h1>gg</h1>
+    <a href="./Controller/Router.php?action=AllUser">retour</a>
 </body>
 </html>
